@@ -1,4 +1,3 @@
-```markdown
 # PSKeePassXC Module
 
 PSKeePassXC is a PowerShell module designed to interact with KeePassXC, a popular password manager. This module allows users to automate and manage their KeePassXC database entries directly from PowerShell.
@@ -56,4 +55,3 @@ Contributions are welcome! Feel free to submit issues or pull requests to improv
 ## License
 
 This project is licensed under the MIT License. See the `LICENSE` file for details.
-```
