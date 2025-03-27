@@ -16,6 +16,7 @@ PSKeePassXC is a PowerShell module designed to interact with KeePassXC's CLI, a 
    - For the current user: `C:\Users\<YourUsername>\Documents\PowerShell\Modules\`
    - For all users: `C:\Program Files\PowerShell\Modules\`
 3. Import the module in your PowerShell session:
+
    ```powershell
    Import-Module PSKeePassXC
    ```
@@ -23,6 +24,7 @@ PSKeePassXC is a PowerShell module designed to interact with KeePassXC's CLI, a 
 ## Usage
 
 ### Connect to a KeePassXC Database
+
 ```powershell
 # Connect with database path and key file
 Connect-KeePassXC -DatabasePath "C:\path\to\database.kdbx" -KeyFilePath "C:\path\to\key.keyx"
@@ -32,11 +34,13 @@ Connect-KeePassXC -DatabasePath "C:\path\to\database.kdbx" -ForceNewCredential
 ```
 
 ### Get the Current Connection
+
 ```powershell
 $connection = Get-KeePassXCConnection
 ```
 
 ### Retrieve Entries
+
 ```powershell
 # Get a specific entry by name
 Get-KeePassXCEntry -EntryName "MyWebsite"
@@ -60,6 +64,7 @@ Get-KeePassXCEntry -Connection $connection -EntryName "MyEntry"
 ## Credential Management
 
 The module securely stores database credentials using PowerShell's Export-Clixml, which leverages Windows DPAPI on Windows systems. Credentials are stored in:
+
 - Windows: `%APPDATA%\PSKeePassXC\KeePassCredentials.xml`
 - macOS: `~/Library/Application Support/PSKeePassXC/KeePassCredentials.xml`
 - Linux: `~/.config/PSKeePassXC/KeePassCredentials.xml`
