@@ -5,7 +5,6 @@ PSKeePassXC is a PowerShell module designed to interact with KeePassXC, a popula
 ## Features
 
 - Retrieve entries from KeePassXC databases.
-- Add, update, or delete entries programmatically.
 - Securely interact with KeePassXC using its native API.
 
 ## Installation
@@ -28,19 +27,14 @@ Import-Module PSKeePassXC
 ```
 
 ### Example Commands
+- **Connect to KeePassXC:**
+  ```powershell
+  Connect-KeePassXC -SocketPath "C:\path\to\socket"
+  ```
+
 - **Retrieve an entry:**
   ```powershell
   Get-KeePassXCEntry -DatabasePath "C:\path\to\database.kdbx" -EntryName "ExampleEntry"
-  ```
-
-- **Add a new entry:**
-  ```powershell
-  Add-KeePassXCEntry -DatabasePath "C:\path\to\database.kdbx" -EntryName "NewEntry" -Username "user" -Password "password"
-  ```
-
-- **Delete an entry:**
-  ```powershell
-  Remove-KeePassXCEntry -DatabasePath "C:\path\to\database.kdbx" -EntryName "OldEntry"
   ```
 
 ## Prerequisites
